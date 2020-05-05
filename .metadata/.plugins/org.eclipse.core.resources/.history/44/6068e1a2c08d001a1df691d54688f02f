@@ -1,0 +1,32 @@
+package com.capgemini.librarymanagementsystemhibernateproject.service;
+
+import java.util.List;
+import com.capgemini.librarymanagementsystemhibernateproject.dto.LibraryInformation;
+import com.capgemini.librarymanagementsystemhibernateproject.dto.BookDetailsHIbernate;
+import com.capgemini.librarymanagementsystemhibernateproject.dto.RequestInformation;
+
+public interface AdminHibernateService {
+
+	boolean enrollUser(LibraryInformation userInfo);
+
+	LibraryInformation signIn(String emailId, String password);
+
+	boolean enrollBook(BookDetailsHIbernate info);
+
+	boolean removeBook(int bookId);
+
+	boolean updateBook(BookDetailsHIbernate bookInfo);
+
+	BookDetailsHIbernate searchBookByBookId(int bookId);
+
+	List<LibraryInformation> listOfUsers();
+
+	List<BookDetailsHIbernate> listOfBooks();
+
+	List<RequestInformation> showAllUserRequests();
+
+	boolean bookIssue(int requestId);
+
+	boolean isBookReceived(int requestId);
+
+}

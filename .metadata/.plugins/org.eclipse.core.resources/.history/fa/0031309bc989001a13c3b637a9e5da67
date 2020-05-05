@@ -1,0 +1,32 @@
+package com.capgemini.librarymanagementsystemjdbc.dao;
+
+import com.capgemini.librarymanagementsystemjdbc.dto.LibraryDetailsJdbc;
+
+import java.util.List;
+
+import com.capgemini.librarymanagementsystemjdbc.dto.BookDetailsJdbc;
+import com.capgemini.librarymanagementsystemjdbc.dto.RequestDetailsJdbc;
+
+public interface UserJdbcDao {
+
+	LibraryDetailsJdbc login(String emailId, String password);
+	
+	List<BookDetailsJdbc> listOfBooks();
+
+	BookDetailsJdbc searchByBookId(int bookId);
+
+	BookDetailsJdbc searchByBookName(String bookName);
+
+	BookDetailsJdbc searchByAuthorName(String authorName);
+	
+//	public RequestDetailsJdbc bookRequest(int id, int bookId,String bookName,String userName);
+
+//	RequestInfo bookRequest(int userId,int bookId);
+
+//	RequestDetailsJdbc bookRequest(LibraryDetailsJdbc userBean, BookDetailsJdbc bookBean);
+	
+	public RequestDetailsJdbc bookRequest(int userId, int bookId)
+
+	boolean bookReturn(int userId, int bookId);
+
+}

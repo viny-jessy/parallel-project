@@ -1,0 +1,26 @@
+package com.capgemini.librarymanagementsystemhibernateproject.dto;
+
+import java.sql.Date;
+
+import com.capgemini.librarymanagementsystemjdbc.dto.BookDetailsJdbc;
+import com.capgemini.librarymanagementsystemjdbc.dto.LibraryDetailsJdbc;
+
+
+
+public class RequestInformation {
+	
+	private int bookId;
+	private int userId;
+	private int requestId;
+	private String userName;
+	private String bookName;
+	private BookDetailsJdbc bookDetails;
+	private LibraryDetailsJdbc userDetails;
+	private Date issueDate;
+	private Date returnDate;
+	private Date expectedReturnDate;
+	private double fine;
+	
+	
+
+}

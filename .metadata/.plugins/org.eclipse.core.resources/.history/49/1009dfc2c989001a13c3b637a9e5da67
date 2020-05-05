@@ -1,0 +1,66 @@
+package com.capgemini.librarymanagementsystemjdbc.service;
+
+import java.util.List;
+
+import com.capgemini.librarymanagementsystemjdbc.dao.UserJdbcDao;
+import com.capgemini.librarymanagementsystemjdbc.dto.LibraryDetailsJdbc;
+import com.capgemini.librarymanagementsystemjdbc.dto.BookDetailsJdbc;
+import com.capgemini.librarymanagementsystemjdbc.dto.RequestDetailsJdbc;
+import com.capgemini.librarymanagementsystemjdbc.factory.LibraryFactoryJdbc;
+
+public class UserServiceJdbcImplementation implements UserServiceJdbc{
+	private UserJdbcDao user = LibraryFactoryJdbc.getUserJdbcDao();
+
+	@Override
+	public LibraryDetailsJdbc login(String emailId, String password) {
+		
+		return user.login(emailId, password);
+	}
+	
+	@Override
+	public List<BookDetailsJdbc> listOfBooks() {
+	
+		return user.listOfBooks();
+	}
+	
+	@Override
+	public BookDetailsJdbc searchByBookId(int bookId) {
+		
+		return user.searchByBookId(bookId);
+	}
+
+	@Override
+	public BookDetailsJdbc searchByBookName(String bookName) {
+		
+		return user.searchByBookName(bookName);
+	}
+
+	@Override
+	public BookDetailsJdbc searchByAuthorName(String authorName) {
+		
+		return user.searchByAuthorName(authorName);
+	}
+
+
+//	@Override
+//	public RequestDetailsJdbc bookRequest(LibraryDetailsJdbc userBean, BookDetailsJdbc bookBean) {
+//		
+//		return user.bookRequest(userBean, bookBean);
+//	}
+	
+	
+
+	@Override
+	public boolean bookReturn(int userId, int bookId) {
+		
+		return user.bookReturn(userId, bookId);
+	}
+
+@Override
+public RequestDetailsJdbc bookRequest(int id, int bookId,String bookName,String userName) {
+	
+	return user.bookRequest(id, bookId,bookName,userName);
+}
+
+	
+}

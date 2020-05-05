@@ -1,0 +1,28 @@
+1583864436357	Rename field 'email'
+1583949701745	Rename method 'bookborrow'
+1583949720371	Rename method 'bookreturn'
+1583953012039	Delete element
+1583953018225	Delete element
+1583958348241	Delete element
+1583958359009	Delete element
+1583958371007	Delete element
+1583958379384	Delete element
+1583958387234	Delete element
+1583988137427	Rename local variable 'userBean'
+1583988166370	Rename method 'doRegistration'
+1583988185613	Rename local variable 'bookBean'
+1583988215753	Rename local variable 'validations'
+1584037457276	Rename field 'password'
+1584042976095	Rename field 'isBookReturnedDate'
+1584068812787	Rename local variable 'userBean1'
+1584068911312	Rename local variable 'userBean'
+1584069252801	Rename local variable 'bookSearch'
+1584069392363	Rename local variable 'bookBean1'
+1584069503666	Rename local variable 'removeBookId'
+1584069739164	Rename local variable 'userBean2'
+1584069771527	Rename local variable 'bId'
+1584069892285	Rename local variable 'bookBean2'
+1584070020476	Rename local variable 'userInfos'
+1584070051977	Rename local variable 'requestInfos'
+1584070499837	Rename local variable 'userInfo'
+1584076013498	Rename local variable 'bookBean'

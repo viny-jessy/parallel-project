@@ -1,0 +1,17 @@
+package com.capgemini.librarymanagementsystemhibernateproject.dao;
+
+import com.capgemini.librarymanagementsystemhibernateproject.dto.BookDetailsHIbernate;
+import com.capgemini.librarymanagementsystemhibernateproject.dto.LibraryInformation;
+import com.capgemini.librarymanagementsystemhibernateproject.dto.RequestInformation;
+
+public interface UserHibernateDao {
+	
+	LibraryInformation login(String email, String password);
+
+	BookDetailsHIbernate searchById(int id);
+
+	RequestInformation bookRequest(LibraryInformation userBean, BookDetailsHIbernate bookBean);
+
+	boolean bookReturn(int userId, int bookId);
+
+}
